@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "0987fae2-8a18-4656-ab7f-c0d8438a84dc",
+		"name": "TrabalhoSOA_Entrega",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastra Profissao",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t\"id\": 1,\n\t\"descricao\": \"Advogado\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/profissao",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profissao"
+					]
+				},
+				"description": "Cadastro de Profissão"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra Estado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t\t\"id\": \"1\",\r\n\t\t\"sigla\": \"AC\",\r\n\t\t\"nome\": \"Acre\"\r\n\t},\r\n\t\t {\r\n\t\t\"id\": \"2\",\r\n\t\t\"sigla\": \"AL\",\r\n\t\t\"nome\": \"Alagoas\"\r\n\t},\r\n\t\t {\r\n\t\t\"id\": \"3\",\r\n\t\t\"sigla\": \"AM\",\r\n\t\t\"nome\": \"Amazonas\"\r\n\t},\r\n\t\t {\r\n\t\t\"id\": \"4\",\r\n\t\t\"sigla\": \"AP\",\r\n\t\t\"nome\": \"Amapá\"\r\n\t}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/estado",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"estado"
+					]
+				},
+				"description": "cadastro de estado"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra cidade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"nome\": \"Afonso Cláudio\",\r\n    \"estado\": {\r\n      \"id\": \"1\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"nome\": \"Água Doce do Norte\",\r\n    \"estado\": {\r\n      \"id\": \"2\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"3\",\r\n    \"nome\": \"Águia Branca\",\r\n    \"estado\": {\r\n      \"id\": \"3\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"4\",\r\n    \"nome\": \"Alegre\",\r\n    \"estado\": {\r\n      \"id\": \"3\"\r\n    }\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cidade",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cidade"
+					]
+				},
+				"description": "Cadastro de Cidades"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra endereço",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bairro\": \"bairro 3\",\r\n  \"cep\": \"123456\",\r\n  \"cidade\": {\r\n    \"id\": 2\r\n  },\r\n  \"complemento\": \"complemento 3\",\r\n  \"id\": 3,\r\n  \"logradouro\": \"logradouro 3\",\r\n  \"numero\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/endereco",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"endereco"
+					]
+				},
+				"description": "Cadastro de Endereço"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dataNascimento\": \"2019-01-02\",\r\n  \"id\": 1,\r\n  \"listaEndereco\": [\r\n    {\r\n      \"id\": 1\r\n    }\r\n  ],\r\n  \"nome\": \"João Roberto\",\r\n  \"profissao\": {\r\n    \"id\": 1\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cliente"
+					]
+				},
+				"description": "cadastro de cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra reserva do voo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cliente\": {\n\t\t\"id\": 1,\n\t\t\"nome\": \"João Roberto\",\n    \t\"dataNascimento\": \"2019-01-02\"\n\t},\n\t\"cidadeOrigem\": \"Goiania\",\n\t\"cidadeDestino\": \"Uberlandia\",\n\t\"preco\": 255.33,\n\t\"data\": \"1991-01-01\",\n\t\"horaEntrada\": \"0120\",\n\t\"horaSaida\": \"0436\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/reserva-voo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reserva-voo"
+					]
+				},
+				"description": "Cadastro de reserva de voo"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra reserva do hotel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cliente\": {\r\n    \"dataNascimento\": \"2019-12-01\",\r\n    \"id\": 1,\r\n    \"nome\": \"João Roberto\"\r\n  },\r\n  \"fim\": \"2019-12-31T20:40:24.512Z\",\r\n  \"idHotel\": 1,\r\n  \"inicio\": \"2019-12-01T20:40:24.512Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/reserva-hotel",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reserva-hotel"
+					]
+				},
+				"description": "Reserva Hotel"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra reserva do carro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"clienteId\": 1,\r\n  \"modeloDoVeiculo\": \"fusca\",\r\n  \"preco\": 500,\r\n  \"status\": 2,\r\n  \"dataInicio\": \"2019-12-01T20:57:10.045Z\",\r\n  \"dataFim\": \"2019-12-31T20:57:10.045Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/reserva-carro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reserva-carro"
+					]
+				},
+				"description": "Reserva Carro"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta valor total de reservas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/total-reservas/cliente/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"total-reservas",
+						"cliente",
+						"1"
+					]
+				},
+				"description": "Total das reservas do cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "Realiza pagamento cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codigoCartao\": \"1\",\r\n  \"dataValidadeCartao\": \"02/27\",\r\n  \"idCliente\": 1,\r\n  \"nomeImpressoCartao\": \"João Roberto\",\r\n  \"numeroCartao\": \"123456789\",\r\n  \"valorTotal\": 4531.98\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/pagamento-cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pagamento-cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Total da reserva do hotel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/reserva-hotel/atualiza/cliente/1/status/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reserva-hotel",
+						"atualiza",
+						"cliente",
+						"1",
+						"status",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Total da reserva do voo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/reserva-voo/atualiza/cliente/1/status/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reserva-voo",
+						"atualiza",
+						"cliente",
+						"1",
+						"status",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Total da reserva do carro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/reserva-carro/atualiza/cliente/1/status/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reserva-carro",
+						"atualiza",
+						"cliente",
+						"1",
+						"status",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,4 @@
+1 - Abrir pasta executáveis
+2 - Executar o arquivo Executar.bat
+3 - Importar para o postman o arquivo execultar_consultas_postman.json
+4 - Executar as rotinas no postman.

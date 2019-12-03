@@ -1,0 +1,447 @@
+﻿{
+  "ReRoutes": [
+    //****************         Cadastro de Cliente       **********************//
+
+    //consulta-cadastra-cliente"
+    {
+      "DownstreamPathTemplate": "/cliente",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/cliente",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "Key": "consulta-cadastra-cliente"
+    },
+    //consulta-deleta-cliente-id
+    {
+      "DownstreamPathTemplate": "/cliente/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/cliente/{id}",
+      "UpstreamHttpMethod": [ "DELETE", "GET" ],
+      "Key": "consulta-deleta-cliente-id"
+    },
+    //consulta-endereco-cliente-id
+    {
+      "DownstreamPathTemplate": "/cliente/findByIdEndereco/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/clienteById/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-endereco-cliente-id"
+    },
+
+    //****************         Cadastro de Profissão       **********************//
+
+    //consulta-cadastra-profissao
+    {
+      "DownstreamPathTemplate": "/profissao",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/profissao",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "Key": "consulta-cadastra-profissao"
+    },
+    //consulta-deleta-profissao-id
+    {
+      "DownstreamPathTemplate": "/profissao/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/profissao/{id}",
+      "UpstreamHttpMethod": [ "DELETE", "GET" ],
+      "Key": "consulta-deleta-profissao-id"
+    },
+
+    //****************         Cadastro de Estado       **********************//
+
+    //consulta-deleta-cadastra-estado
+    {
+      "DownstreamPathTemplate": "/estado",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/estado",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE" ],
+      "Key": "consulta-deleta-cadastra-estado"
+    },
+    //consulta-estado-id
+    {
+      "DownstreamPathTemplate": "/estado/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/estado/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-estado-id"
+    },
+
+    //****************         Cadastro de Cidade       **********************//
+
+    //consulta-deleta-cadastra-cidade
+    {
+      "DownstreamPathTemplate": "/cidade",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/cidade",
+      "UpstreamHttpMethod": [ "POST", "GET", "DELETE" ],
+      "Key": "consulta-deleta-cadastra-cidade"
+    },
+
+    //consulta-cidade-id
+    {
+      "DownstreamPathTemplate": "/cidade/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/cidade/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-cidade-id"
+    },
+
+    //****************         Cadastro de Endereço       **********************//
+
+    //consulta-cadastra-endereco
+    {
+      "DownstreamPathTemplate": "/endereco",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/endereco",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "Key": "consulta-cadastra-endereco"
+    },
+    //consulta-deleta-endereco-id
+    {
+      "DownstreamPathTemplate": "/endereco/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/endereco/{id}",
+      "UpstreamHttpMethod": [ "DELETE", "GET" ],
+      "Key": "consulta-deleta-endereco-id"
+    },
+
+
+    //****************         Cadastro de Reserva voo       **********************//
+
+    //consulta-cadastra-reserva-voo
+    {
+      "DownstreamPathTemplate": "/reserva-voo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-voo",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "Key": "consulta-cadastra-reserva-voo"
+    },
+    //consulta-deleta-reserva-voo-id
+    {
+      "DownstreamPathTemplate": "/reserva-voo/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-voo/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "Key": "consulta-deleta-reserva-voo-id"
+    },
+    //total-reserva-voo-cliente
+    {
+      "DownstreamPathTemplate": "/reserva-voo/getTotalCliente/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-voo-total-cliente/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "total-reserva-voo-cliente"
+    },
+    //atualiza-reserva-voo-cliente-status
+    {
+      "DownstreamPathTemplate": "/reserva-voo/{id}/status/{status}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-voo/atualiza/cliente/{id}/status/{status}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Key": "atualiza-reserva-voo-cliente-status"
+    },
+
+
+    //****************         Cadastro de Reserva hotel       **********************//
+
+    //atualiza-reserva-hotel-cliente-status
+    {
+      "DownstreamPathTemplate": "/api/hotel/Reserva/cliente/{id}/status/{status}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-hotel/atualiza/cliente/{id}/status/{status}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Key": "atualiza-reserva-hotel-cliente-status"
+    },
+    //consulta-hotel-reserva
+    {
+      "DownstreamPathTemplate": "/api/hotel/consulta",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/hotel-reserva",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-hotel-reserva"
+    },
+    //cadastra-reserva-hotel-cliente
+    {
+      "DownstreamPathTemplate": "/api/hotel/realizar-reserva",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-hotel",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Key": "cadastra-reserva-hotel-cliente"
+    },
+    //consulta-reserva-hotel-cliente
+    {
+      "DownstreamPathTemplate": "/api/hotel/reservas/cliente/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/hotel-reserva/total-reserva/cliente/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-reserva-hotel-cliente"
+    },
+    //total-reserva-pendente-hotel-cliente
+    {
+      "DownstreamPathTemplate": "/api/hotel/total-reserva-pendente/cliente/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8003
+        }
+      ],
+      "UpstreamPathTemplate": "/hotel/total-reserva-pendente/cliente/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "total-reserva-pendente-hotel-cliente"
+    },
+
+    //****************         Cadastro de Pagamento      **********************//
+
+    //cadastra-pagamento-cliente
+    {
+      "DownstreamPathTemplate": "/api/pagamento/pagar",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8007
+        }
+      ],
+      "UpstreamPathTemplate": "/pagamento-cliente",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Key": "cadastra-pagamento-cliente"
+    },
+    //consulta-pagamento-cliente
+    {
+      "DownstreamPathTemplate": "/api/pagamento/consulta",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8007
+        }
+      ],
+      "UpstreamPathTemplate": "/pagamento-cliente/consulta",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-pagamento-cliente"
+    },
+    //consulta-pagamento-cliente-id
+    {
+      "DownstreamPathTemplate": "/api/pagamento/cliente/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8007
+        }
+      ],
+      "UpstreamPathTemplate": "/pagamento-cliente/consulta/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-pagamento-cliente-id"
+    },
+
+    //****************         Cadastro de reverva Carro     **********************//
+
+    //cadastra-reserva-carro
+    {
+      "DownstreamPathTemplate": "/api/carro/Reserva",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-carro",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Key": "cadastra-reserva-carro"
+    },
+    //atualiza-reserva-carro-cliente-status
+    {
+      "DownstreamPathTemplate": "/api/carro/Reserva/cliente/{id}/status/{status}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-carro/atualiza/cliente/{id}/status/{status}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Key": "atualiza-reserva-carro-cliente-status"
+    },
+    //consulta-carro-cliente-id
+    {
+      "DownstreamPathTemplate": "/api/carro/Reserva/cliente/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-carro/cliente/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "consulta-carro-cliente-id"
+    },
+    //total-reserva-carro-cliente
+    {
+      "DownstreamPathTemplate": "/api/carro/Reserva/preco/cliente/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/reserva-carro/preco/cliente/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "total-reserva-carro-cliente"
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/values",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/values",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "teste"
+    }
+
+
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "total-reserva-voo-cliente",
+        "total-reserva-pendente-hotel-cliente",
+        "total-reserva-carro-cliente"
+      ],
+      "UpstreamPathTemplate": "/total-reservas/cliente/{id}"
+    },
+    {
+      "ReRouteKeys": [
+        "atualiza-reserva-hotel-cliente-status",
+        "atualiza-reserva-carro-cliente-status"
+      ],
+      "UpstreamPathTemplate": "atualiza-status/cliente/{id}/status/{status}"
+    }
+
+  ],
+  "GlobalConfiguration": {}
+}
